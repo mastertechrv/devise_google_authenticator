@@ -3,7 +3,6 @@ class Devise::CheckgaController < Devise::SessionsController
   prepend_before_filter :require_no_authentication, :only => [ :show, :update ]
 
   include Devise::Controllers::Helpers
-  render :layout => false, :only => [:show]
 
   def show
     @tmpid = params[:id]
